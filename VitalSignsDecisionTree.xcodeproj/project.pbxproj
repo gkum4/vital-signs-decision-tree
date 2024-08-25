@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CE4592F2C794C18007846B8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4592E2C794C18007846B8 /* main.swift */; };
+		0CCF92062C7964F800F34064 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4592E2C794C18007846B8 /* main.swift */; };
+		0CCF920E2C79699000F34064 /* DecisionTreeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF920D2C79699000F34064 /* DecisionTreeCreator.swift */; };
+		0CCF92102C796AA900F34064 /* SeverityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF920F2C796AA900F34064 /* SeverityClass.swift */; };
+		0CCF92122C7A6AE000F34064 /* TestDataElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF92112C7A6AE000F34064 /* TestDataElement.swift */; };
+		0CE459362C794C2C007846B8 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE459352C794C2C007846B8 /* Node.swift */; };
+		0CE459382C794C80007846B8 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE459372C794C80007846B8 /* Attribute.swift */; };
+		0CE4593C2C795C9A007846B8 /* NodeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4593B2C795C9A007846B8 /* NodeValue.swift */; };
+		0CE4593E2C795D10007846B8 /* DataElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4593D2C795D10007846B8 /* DataElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +30,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0CE4592B2C794C18007846B8 /* ID3VitalSigns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ID3VitalSigns; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CCF920D2C79699000F34064 /* DecisionTreeCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionTreeCreator.swift; sourceTree = "<group>"; };
+		0CCF920F2C796AA900F34064 /* SeverityClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityClass.swift; sourceTree = "<group>"; };
+		0CCF92112C7A6AE000F34064 /* TestDataElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataElement.swift; sourceTree = "<group>"; };
+		0CE4592B2C794C18007846B8 /* VitalSignsDecisionTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VitalSignsDecisionTree; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE4592E2C794C18007846B8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0CE459352C794C2C007846B8 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		0CE459372C794C80007846B8 /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		0CE459392C795C53007846B8 /* treino_sinais_vitais_com_label.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = treino_sinais_vitais_com_label.txt; sourceTree = "<group>"; };
+		0CE4593A2C795C53007846B8 /* treino_sinais_vitais_sem_label.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = treino_sinais_vitais_sem_label.txt; sourceTree = "<group>"; };
+		0CE4593B2C795C9A007846B8 /* NodeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeValue.swift; sourceTree = "<group>"; };
+		0CE4593D2C795D10007846B8 /* DataElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,10 +54,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CCF92312C7A8C3100F34064 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4593B2C795C9A007846B8 /* NodeValue.swift */,
+				0CE459372C794C80007846B8 /* Attribute.swift */,
+				0CCF920F2C796AA900F34064 /* SeverityClass.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		0CE459222C794C18007846B8 = {
 			isa = PBXGroup;
 			children = (
-				0CE4592D2C794C18007846B8 /* ID3VitalSigns */,
+				0CE4592D2C794C18007846B8 /* VitalSignsDecisionTree */,
 				0CE4592C2C794C18007846B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +75,40 @@
 		0CE4592C2C794C18007846B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4592B2C794C18007846B8 /* ID3VitalSigns */,
+				0CE4592B2C794C18007846B8 /* VitalSignsDecisionTree */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0CE4592D2C794C18007846B8 /* ID3VitalSigns */ = {
+		0CE4592D2C794C18007846B8 /* VitalSignsDecisionTree */ = {
 			isa = PBXGroup;
 			children = (
+				0CE4593A2C795C53007846B8 /* treino_sinais_vitais_sem_label.txt */,
+				0CE459392C795C53007846B8 /* treino_sinais_vitais_com_label.txt */,
+				0CCF92312C7A8C3100F34064 /* Enums */,
+				0CE4593F2C795D17007846B8 /* Models */,
+				0CCF920D2C79699000F34064 /* DecisionTreeCreator.swift */,
 				0CE4592E2C794C18007846B8 /* main.swift */,
 			);
-			path = ID3VitalSigns;
+			path = VitalSignsDecisionTree;
+			sourceTree = "<group>";
+		};
+		0CE4593F2C795D17007846B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0CE459352C794C2C007846B8 /* Node.swift */,
+				0CE4593D2C795D10007846B8 /* DataElement.swift */,
+				0CCF92112C7A6AE000F34064 /* TestDataElement.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CE4592A2C794C18007846B8 /* ID3VitalSigns */ = {
+		0CE4592A2C794C18007846B8 /* VitalSignsDecisionTree */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CE459322C794C18007846B8 /* Build configuration list for PBXNativeTarget "ID3VitalSigns" */;
+			buildConfigurationList = 0CE459322C794C18007846B8 /* Build configuration list for PBXNativeTarget "VitalSignsDecisionTree" */;
 			buildPhases = (
 				0CE459272C794C18007846B8 /* Sources */,
 				0CE459282C794C18007846B8 /* Frameworks */,
@@ -77,9 +118,9 @@
 			);
 			dependencies = (
 			);
-			name = ID3VitalSigns;
+			name = VitalSignsDecisionTree;
 			productName = ID3VitalSigns;
-			productReference = 0CE4592B2C794C18007846B8 /* ID3VitalSigns */;
+			productReference = 0CE4592B2C794C18007846B8 /* VitalSignsDecisionTree */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CE459262C794C18007846B8 /* Build configuration list for PBXProject "ID3VitalSigns" */;
+			buildConfigurationList = 0CE459262C794C18007846B8 /* Build configuration list for PBXProject "VitalSignsDecisionTree" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CE4592A2C794C18007846B8 /* ID3VitalSigns */,
+				0CE4592A2C794C18007846B8 /* VitalSignsDecisionTree */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE4592F2C794C18007846B8 /* main.swift in Sources */,
+				0CE459382C794C80007846B8 /* Attribute.swift in Sources */,
+				0CCF92062C7964F800F34064 /* main.swift in Sources */,
+				0CCF920E2C79699000F34064 /* DecisionTreeCreator.swift in Sources */,
+				0CCF92102C796AA900F34064 /* SeverityClass.swift in Sources */,
+				0CCF92122C7A6AE000F34064 /* TestDataElement.swift in Sources */,
+				0CE4593C2C795C9A007846B8 /* NodeValue.swift in Sources */,
+				0CE459362C794C2C007846B8 /* Node.swift in Sources */,
+				0CE4593E2C795D10007846B8 /* DataElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CE459262C794C18007846B8 /* Build configuration list for PBXProject "ID3VitalSigns" */ = {
+		0CE459262C794C18007846B8 /* Build configuration list for PBXProject "VitalSignsDecisionTree" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE459302C794C18007846B8 /* Debug */,
@@ -279,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CE459322C794C18007846B8 /* Build configuration list for PBXNativeTarget "ID3VitalSigns" */ = {
+		0CE459322C794C18007846B8 /* Build configuration list for PBXNativeTarget "VitalSignsDecisionTree" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE459332C794C18007846B8 /* Debug */,
